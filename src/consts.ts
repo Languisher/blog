@@ -16,13 +16,13 @@
  * beian {string} Chinese policy
  */
 export const site = {
-  title: 'Astro Theme Yi', // required
+  title: "Languisher's Blog", // required
   favicon: '/favicon.svg', // required
   description: 'Welcome to my independent blog website! ',
-  author: "Astro-Yi", // required
-  avatar: '/avatar.png', // required
-  motto: 'Actions speak louder than words.',
-  url: 'https://astro-yi-nu.vercel.app',
+  author: "林德懿", // required
+  avatar: 'https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/IMG_7522.JPG', // required
+  motto: '长风破浪会有时，直挂云帆济沧海',
+  url: 'https://languisher.icu',
   recentBlogSize: 5,
   archivePageSize: 25,
   postPageSize: 10,
@@ -100,7 +100,7 @@ export const categories = [
  * Personal link address
  */
 export const infoLinks = [
-  {
+  /**{
     icon: 'ri-telegram-fill',
     name: 'telegram',
     outlink: 'xxxxxxx',
@@ -115,16 +115,19 @@ export const infoLinks = [
     name: 'instagram',
     outlink: 'xxxxxxx',
   },
+  **/
   {
     icon: 'ri-github-fill',
     name: 'github',
-    outlink: 'https://github.com/cirry',
+    outlink: 'https://github.com/languisher',
   },
+  /** 
   {
     icon: 'ri-rss-fill',
     name: 'rss',
     outlink: 'https://astro-yi-nu.vercel.app/rss.xml',
   }
+    **/
 ]
 
 /**

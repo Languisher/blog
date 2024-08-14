@@ -2,6 +2,7 @@
 title: "Parallel Computing 1 (CS149, CMU15-418)"
 description: "Notes according to CS149/CMU15-418 Lecture 1-2."
 date: 2024-08-13
+category: ["Computer System"]
 tags: ["Parallel Computing"]
 ---
 
@@ -32,7 +33,7 @@ First, a **processor** that executes instructions should contain three basic com
 
 Here we introduce three types of parallel execution:
 1. In the past, we exploited ILP within an instruction stream, meaning we identified two or more instructions that could be executed simultaneously. The term _superscalar execution_ refers to the processor automatically finding independent instructions in an instruction sequence and executing them in parallel on multiple execution units. Below is an example: ![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/Pasted%20image%2020240813201925.png)
-2. **Multi-core processors allow multiple threads to run in parallel (Thread-level parallelism).** Early processors adopted complex structures such as data caches, out-of-order control logic, and sophisticated branch predictors. However, in multi-core designs, these structures were replaced by additional cores using the same number of transistors. Although a single core in a multi-core design may underperform compared to previous designs (by about 25%), fully exploiting parallelism can potentially lead to a speedup of $2 \times 0.75 = 1.5$ times. ![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/Pasted%20image%2020240813202726.png)
+2. **Multi-core processors allow multiple threads to run in parallel (Thread-level parallelism).** Early processors adopted complex structures such as data caches, out-of-order control logic, and sophisticated branch predictors. However, in multi-core designs, these structures were replaced by additional cores using the same number of transistors. Although a single core in a multi-core design may underperform compared to previous designs (by about 25%), fully exploiting parallelism can potentially lead to a speedup of 2x0.75=1.5 times. ![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/Pasted%20image%2020240813202726.png)
 3. **Single Instruction Multiple Data (SIMD) processing adds execution units (ALUs) to a core, enabling the same instruction to be executed across multiple data elements simultaneously.** This approach amortizes the cost and complexity of managing an instruction stream across many ALUs. The number of ALUs determines how many elements can be operated on in parallel. Below is an example: ![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/Pasted%20image%2020240813203015.png)
 
 

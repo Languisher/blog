@@ -2,7 +2,8 @@
 title: "Bomb Lab (1/2)"
 description: "Bomb Lab 的作业报告（第一部分）"
 date: 2024-08-08
-tags: ["CS:APP"]
+category: ["Computer System"]
+tags: ["CS:APP", "Lab Report"]
 ---
 
 

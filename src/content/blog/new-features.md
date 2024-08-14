@@ -4,6 +4,8 @@ title: New features
 description: More new features specific to this theme.
 mermaid: true
 mathjax: true
+category: ["Tutorial"]
+tags: ["Markdown", "Astro"]
 ---
 
 

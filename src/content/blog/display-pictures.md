@@ -2,6 +2,8 @@
 title: Pictures display
 date: 2024-03-21
 description: Showcase your favorite images in more ways than one!
+category: ["Tutorial"]
+tags: ["Astro"]
 ---
 
 ### Display remote links
