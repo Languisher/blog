@@ -1,6 +1,6 @@
 ---
 title: "进程"
-description: "本文是 CS:APP 8.2 节的笔记。）"
+description: "本文是 CS:APP 8.2 节的笔记。"
 date: 2024-08-14
 category: ["Computer System"]
 tags: ["CS:APP"]
