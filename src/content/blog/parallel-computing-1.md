@@ -1,5 +1,5 @@
 ---
-title: "Parallel Computing 2 (CS149, CMU15-418)"
+title: "Parallel Computing 1 (CS149, CMU15-418)"
 description: "Notes according to CS149/CMU15-418 Lecture 1-2."
 date: 2024-08-17
 category: ["Computer System"]
@@ -49,7 +49,7 @@ Here we introduce three types of parallel execution:
 
 1. **Superscalar execution**: _Exploits Instruction Level Parallelism by executing multiple different instructions (of a single instruction stream) simultaneously inside one core._ In the past, we exploited ILP within an instruction stream, meaning we identified two or more instructions that could be executed simultaneously. (This is done automatically by the processor) The term **superscalar execution** refers to the processor automatically finding independent instructions in an instruction sequence and executing them in parallel on multiple execution units. Below is an example: ![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/Pasted%20image%2020240813201925.png) Accordingly, the ALU should match the number of F/D units, or else we have explored the dependencies between the instructions but lack the ability to execute them: ![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/202408171733350.png)
 
-2. **Multi-core processors**: *Allow multiple cores (threads) to run in parallel (Thread-level parallelism), with each core executing a completely different instruction stream.* Early processors adopted complex structures such as data caches, out-of-order control logic, and sophisticated branch predictors. However, in multi-core designs, these structures were replaced by additional cores using the same number of transistors. Although a single core in a multi-core design may underperform compared to previous designs (by about 25%), fully exploiting parallelism can potentially lead to a speedup of 2x0.75=1.5 times. ![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/Pasted%20image%2020240813202726.png) Note that thread-level parallelism also applies to the same instructions but with different inputs, corresponding to the proposed `foreach` concept.[^5]
+2. **Multi-core processors**: *Allow multiple cores (threads) to run in parallel (Thread-level parallelism), with each core executing a completely different instruction stream.* Early processors adopted complex structures such as data caches, out-of-order control logic, and sophisticated branch predictors. However, in multi-core designs, these structures were replaced by additional cores using the same number of transistors. Although a single core in a multi-core design may underperform compared to previous designs (by about 25%), fully exploiting parallelism can potentially lead to a speedup of 2x0.75=1.5 times. ![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/Pasted%20image%2020240813202726.png) Note that thread-level parallelism also applies to the same instructions but with different inputs, corresponding to the proposed `foreach` or `vector_mul` concept.[^5]
 
 3. **Single Instruction Multiple Data (SIMD): effectively operating one atomic instruction on multiple (or an array of) inputs.** _Processing adds execution units (ALUs) to a core, enabling the same instruction to be executed across multiple data elements simultaneously._ This approach amortizes the cost and complexity of managing an instruction stream across many ALUs. The instruction is broadcast to all ALUs, while the input to the ALUs is different. The number of ALUs determines how many elements can be operated on in parallel. ![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/202408171745672.png)
 
@@ -67,6 +67,11 @@ Two main concepts:
 2. **Memory bandwidth** is the rate at which the memory system can provide data to a processor.
 
 These can be metaphorically compared to a highway: the number of lanes determines how many cars can pass through in a given time, corresponding to memory bandwidth; the length or condition of the road determines the time it takes to reach the destination, corresponding to memory latency.
+
+The *bandwidth* is the *critical* resource. Therefore, performant parallel programs will:
+
+- *Fetch data from memory less often*: Reuse data previously loaded and share data across threads
+- *Prefer performing additional arithmetic*: Compared to load/store, the math is "free"
 
 ## Reducing Memory Stalls
 
@@ -92,6 +97,12 @@ Multi-threading, caches, and prefetching are all used to reduce stalls and conse
 
 Moreover, GPU architectures use the same throughput computing ideas as CPUs, but GPUs push these concepts to extreme scales.
 
+## Final Design
+
+![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/202408172235931.png)
+
+
+
 ## From Another Perspective
 
 To fully exploit parallel processors efficiently, an application should:
@@ -100,13 +111,13 @@ To fully exploit parallel processors efficiently, an application should:
 - Ensure groups of parallel work items require the _same sequences of instructions_ (SIMD)
 - Expose more parallel work
 
+
+
 ## Extraneous
 
 - Conditioning instructions to SIMD instructions: some ALUs wait when the other branch is executing.[^6]
 
-[^1]: https
-
-://gfxcourses.stanford.edu/cs149/fall21/lecture/whyparallelism/
+[^1]: https://gfxcourses.stanford.edu/cs149/fall21/lecture/whyparallelism/
 [^2]: https://www.bilibili.com/video/BV16k4y1z7z9?p=1&vd_source=5ade9da381cec8d2c191f450ccd0cf57
 [^3]: https://gfxcourses.stanford.edu/cs149/fall21/lecture/multicorearch/
 [^4]: https://gfxcourses.stanford.edu/cs149/fall21/lecture/whyparallelism/slide_51
