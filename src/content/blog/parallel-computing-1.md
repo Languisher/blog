@@ -1,5 +1,5 @@
 ---
-title: "Parallel Computing 1 (CS149, CMU15-418)"
+title: "[PC-1] Introduction, Multi-core Processor"
 description: "Notes according to CS149/CMU15-418 Lecture 1-2."
 date: 2024-08-17
 category: ["Computer System"]
