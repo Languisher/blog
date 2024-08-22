@@ -9,7 +9,7 @@ tags: ["Parallel Computing"]
 
 These notes are based on CS149/CMU15-418 Lecture 1-2, according to the video[^2] and lecture slides[^1][^3]. The main purpose of these notes is to summarize and expand on the content of the courses.
 
-These notes will address the following questions:
+This note will address the following questions:
 
 - Why do we need parallelism? **Multi-thread**
 - What are the different forms of parallel execution? **Superscalar, SIMD, and Multi-core**

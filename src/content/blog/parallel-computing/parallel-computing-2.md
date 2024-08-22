@@ -11,6 +11,11 @@ mathjax: true
 
 These notes are based on CS149/CMU15-418 Lecture 3-4, following the video[^2] and lecture slides[^1][^3]. The main purpose of these notes is to summarize and expand on the course content.
 
+This note will address the following questions:
+- What are key aspects of a typical parallel programming model? **Shared address model, Message passing model and Data parallel model**
+- How to write a parallel program? Decompose the process in different steps. **Decomposition, Assignment, Orchestration and Mapping**
+
+
 ## SPMD Programming Model
 
 ### ISPC: Assignment of Array Elements
