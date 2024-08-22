@@ -1,7 +1,7 @@
 ---
 title: "Vim 跳转"
 description: "Vim 中跳转的方式"
-date: 2023-11-27
+date: 2024-08-22
 category: ["Software Engineering"]
 tags: ["Vim"]
 ---
