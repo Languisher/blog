@@ -16,7 +16,7 @@ This note will address the following questions:
 - How to write a parallel program? Decompose the process in different steps. **Decomposition, Assignment, Orchestration and Mapping**
 
 
-## SPMD Programming Model
+## SPMD Programming Mode
 
 ### ISPC: Assignment of Array Elements
 
