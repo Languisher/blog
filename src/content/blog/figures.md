@@ -3,7 +3,7 @@ title: "基于 Mermaid 的 Markdown 基本插图"
 description: ""
 date: 2024-08-23
 category: [""]
-tags: ["Git"]
+tags: ["Markdown"]
 mermaid: true
 ---
 
