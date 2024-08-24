@@ -21,7 +21,7 @@ export const site = {
   description: 'Welcome to my independent blog website! ',
   author: "林德懿", // required
   avatar: 'https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/IMG_7522.JPG', // required
-  motto: '长风破浪会有时，直挂云帆济沧海',
+  motto: '林德懿',
   url: 'https://languisher.icu',
   recentBlogSize: 5,
   archivePageSize: 25,
