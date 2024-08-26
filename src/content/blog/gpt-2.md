@@ -1,12 +1,14 @@
 ---
 title: "GPT-2 Note: A Source-Code Perspective"
-description: "No desc."
+description: "这篇文章从 GPT-2 源码角度解析 Transformer 模型以及 KVCache 的应用，偏向代码实现"
 date: 2024-08-24
 category: ["Machine Learning"]
 tags: ["GPT", "Transformer"]
 ---
 
 这篇文章从 GPT-2 源码角度解析 Transformer 模型以及 KVCache 的应用，偏向代码实现。
+
+与此同时，我做了一个关于 GPT-2 模型中 KVCache 源码实现的组会汇报，PDF 文件可以点击查看：[GPT-2 Note: A Source-Code Perspective](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/KVCache-GPT2.pdf)
 
 ## Recap: Theory of GPT-2 Model
 
