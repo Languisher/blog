@@ -13,7 +13,7 @@ const blog = defineCollection({
     mermaid: z.boolean().default(false).nullable(),
     draft: z.boolean().default(false).nullable(),
     toc: z.boolean().default(true).nullable(),
-    donate: z.boolean().default(true).nullable(),
+    donate: z.boolean().default(false).nullable(),
     comment: z.boolean().default(true).nullable(),
   }),
 });
@@ -21,7 +21,7 @@ const blog = defineCollection({
 const feed = defineCollection({
   schema: z.object({
     date: z.date().or(z.string()).optional().nullable(),
-    donate: z.boolean().default(true),
+    donate: z.boolean().default(false),
     comment: z.boolean().default(true),
   })
 })

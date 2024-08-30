@@ -66,34 +66,21 @@ export const categories = [
     iconClass: "ri-archive-line",
     href: "/archive/1",
   },
-  {
+  /**{
     name: "Message",
     iconClass: "ri-chat-1-line",
     href: "/message",
+  },*/
+  {
+    name: 'About Me',
+    iconClass: 'ri-emotion-laugh-line',
+    href: '/about',
   },
   {
     name: "Search",
     iconClass: "ri-search-line",
     href: "/search",
   },
-  {
-    name: "More",
-    iconClass: "ri-more-fill",
-    href: "javascript:void(0);",
-    children: [
-      {
-        name: 'About',
-        iconClass: 'ri-information-line',
-        href: '/about',
-      },
-      {
-        name: 'Friends',
-        iconClass: 'ri-user-5-line',
-        href: '/friends',
-        target: '_self',
-      },
-    ]
-  }
 ]
 
 /**
@@ -120,6 +107,15 @@ export const infoLinks = [
     icon: 'ri-github-fill',
     name: 'github',
     outlink: 'https://github.com/languisher',
+  },
+  {
+    icon: 'ri-mail-fill',
+    name: 'mail',
+    outlink: 'mailto:lns_brandon@sjtu.edu.cn',
+  },
+  {
+    icon: 'ri-zzz-fill',
+    name: 'zzz',
   },
   /** 
   {
