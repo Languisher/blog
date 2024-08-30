@@ -23,9 +23,9 @@ using std::string;
 除了基础的赋值之外，提供特殊的直接初始化方式：
 `
 ```cpp
-string s2 = "Value"
-string s3("Value")
-string s4(n, "c") // = string s4("c...c") where c appears n times
+string s2 = "Value";
+string s3("Value");
+string s4(n, "c"); // = string s4("c...c") where c appears n times
 ```
 
 ### 对 string 对象的整体操作

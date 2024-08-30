@@ -3,7 +3,7 @@ title: "KVCache 1: Intrinsic Limitations"
 description: "KVCache 分析系列一"
 date: 2024-08-30
 category: ["LLM"]
-tags: ["Transformer", "KVCace"]
+tags: ["Transformer", "KVCache"]
 mathjax: true
 ---
 

@@ -2,7 +2,7 @@
 title: "GPT-2 Note: A Source-Code Perspective"
 description: "这篇文章从 GPT-2 源码角度解析 Transformer 模型以及 KVCache 的应用，偏向代码实现"
 date: 2024-08-24
-category: ["Machine Learning"]
+category: ["LLM"]
 tags: ["GPT", "Transformer"]
 ---
 
