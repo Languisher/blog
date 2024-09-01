@@ -4,6 +4,7 @@ description: "Notes according to Computer System: A Programmer's Perspective Thi
 date: 2024-09-01
 category: ["Computer System"]
 tags: ["CS:APP"]
+mathjax: true
 ---
 
 ## Overview of Memory Hierarchies
