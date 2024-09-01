@@ -1,6 +1,6 @@
 ---
 title: "Git 基础操作"
-description: "本文主要介绍计算机内存的结构，参考 CS:APP 6.2-6.3 部分内容。"
+description: ""
 date: 2024-08-23
 category: [""]
 tags: ["Git"]
