@@ -6,21 +6,20 @@ category: ["Computer System"]
 tags: ["CS:APP"]
 ---
 
-
 Reference: Computer System: A Programmer's Perspective Third Edition Chapter 8
-
 
 ## Exceptions
 
 Exceptions could be divided into two categories: **Asynchronous exceptions** and **Synchronous exceptions**, their difference is whether the exception is toggled by instructions or not. Asynchronous exceptions are toggled by external I/O devices or a counter, which allows the kernel to take over control and switch to also processes regularly.
 
-![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/202409011644101.png)
+![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/202409011657335.png)
 
 **Interruption** is an asynchronous exception.
 
-**Traps** is an intentional exception, usually used for breakpoints or system calls (`syscall`), such as opening files.
+**Trap** is an intentional exception, usually used for breakpoints or system calls (`syscall`), such as opening files.
 
-**Faults** is called by errors. Examples of faults:
+**Fault** is called by errors. Examples of faults:
+
 - Page fault: Try to load data from memory, if it succeed, it would return to the instruction that causes page fault.
 - Segmentation fault (e.g. Access array elements that are out of bound): First the page fault would be triggered, however the kernel founds out that it could not fix the error, thus abort.
 
@@ -31,6 +30,7 @@ Exceptions could be divided into two categories: **Asynchronous exceptions** and
 **Process** is a core concept in computer systems. On modern systems, many programs run simultaneously, and a process is defined as an *instance* of a program in execution. Processes create the illusion that our program is the only one currently running on the system, thus monopolizing the processor and memory.
 
 To achieve the illusion of “monopolization,” corresponding key abstractions are needed:
+
 - **Logical control flow** gives the illusion that our program exclusively controls the processor.
 - **Private address space** gives the illusion that our program exclusively controls the memory system.
 
@@ -73,6 +73,7 @@ The only way to switch between user mode and kernel mode is through **exceptions
 Every program in the system has a state. Therefore, a process's **context** consists of the states required to manage the program's normal operation, including the stack, general-purpose registers, program counter, environment variables, and the set of open file descriptors.
 
 To determine when to preempt a process, the kernel makes decisions, and the corresponding decision-maker is called the **scheduler**. The kernel **schedules** processes, meaning it controls the transfer from the current process to a new one. The mechanism for this is known as a **context switch**:
+
 1. Save the context of the current process.
 2. Restore the context of the new (or previously preempted) process.
 3. Transfer control to the new process.
