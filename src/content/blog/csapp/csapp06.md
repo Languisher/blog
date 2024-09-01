@@ -44,7 +44,7 @@ Multiplication between large matrices can be very time-consuming, especially sin
 
 The mathematical formula for matrix multiplication is as follows: $$ \forall i \in [1,I], \quad \forall j \in [1,J], \quad c_{i,j} = \sum_{k=1}^K a_{i, k} b_{k, j} \quad \text{where } A=(A_{i,k}), B=(B_{k,j}) $$
 
-**Spatial locality** suggests that accessing consecutive elements in memory is beneficial for performance. To optimize matrix multiplication by taking advantage of spatial locality, we can reorganize the computation: $$ (i,*) = (i,k)\times(k,*)$$
+**Spatial locality** suggests that accessing consecutive elements in memory is beneficial for performance. To optimize matrix multiplication by taking advantage of spatial locality, we can reorganize the computation: $$ (i,:) = (i,k)\times(k,:) $$
 The corresponding pseudocode is:
 
 ```
