@@ -149,3 +149,18 @@ A fully associative cache is the opposite of a direct-mapped cache: all lines ar
 A set associative cache strikes a balance between direct-mapped and fully associative caches. In a set associative cache, the cache is divided into several sets, and each set contains multiple lines. A memory address is mapped to a specific set based on the set index, but within that set, any line can be used to store the data.
 
 This approach reduces the likelihood of thrashing, as multiple lines within a set can accommodate different data blocks that share the same set index. Therefore, it combines the simplicity of a direct-mapped cache with the flexibility of a fully associative cache.
+
+### Write data, use cache or not?
+
+There are two primary strategies for handling writes in a cache:
+
+- **No-Write-Allocate**: Writing is performed directly to the main memory, bypassing the cache entirely.
+- **Write-Allocate**: The data is first loaded into the cache, and then the cache line is updated.
+
+The cache is utilized to leverage locality, which is beneficial in scenarios where we anticipate performing writes to nearby or consecutive lines (blocks).
+
+Writing to a block in the cache can also be managed using two different approaches:
+
+- **Write-Through**: Any changes made to the cache are immediately written through to the main memory. This ensures that the memory always reflects the most recent data, but it can lead to a higher frequency of writes to memory.
+
+- **Write-Back**: The updated block is only written to the main memory when it is evicted from the cache (i.e., selected as the victim line). This approach reduces the number of memory write operations by delaying them until necessary. To implement write-back, a **dirty bit** is used to indicate whether the data in the cache block has been modified (is "dirty") and thus differs from the data in the main memory.
