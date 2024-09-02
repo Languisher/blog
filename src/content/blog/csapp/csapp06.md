@@ -131,7 +131,6 @@ The CPU first sends the address to the cache and requests the data stored at tha
 
 3. **Bit Selection**: The lower **b** bits of the address determine the offset within the block to select the specific data word.
 
-This version enhances clarity and structure while maintaining the original meaning.
 
 ![](https://pub-f4fb14aad5ef4ee6a83bd71292941254.r2.dev/202409011406202.png)
 ### Direct-mapped cache: E=1
