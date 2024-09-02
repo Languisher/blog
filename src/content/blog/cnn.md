@@ -156,7 +156,7 @@ mathjax: true
     - $t$ is the size of a specific type of kernel. If $t$ equals to the width of the output, then it is **partially connected network**.
     - The layer cycles in a collection of different kernels.
 
-- Comparison between **partially connected, tiled convolution, convolution networks**: ![](../../../../文稿 - 林楠的MacBook Pro/需要整理的材料/Notes (Site)/docs/CS/CV/assets/CNN-1.png)
+- Comparison between **partially connected, tiled convolution, convolution networks**: 
 
 - Characteristics Learning: The supervised learning of special characteristics(kernels) are relatively expensive, therefore these methods are applied:
 

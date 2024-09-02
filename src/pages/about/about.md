@@ -3,19 +3,25 @@ donate: false
 comment: false
 ---
 
-# 林楠
 
-Undergraduate, [Shanghai Jiao Tong University](https://www.sjtu.edu.cn/)
+:::tip[林  楠 Nan Lin]
 
-E-mail (edu): lns_brandon at sjtu dot edu dot cn
+__Undergraduate__, [__Shanghai Jiao Tong University 上海交通大学__](https://www.sjtu.edu.cn/)
 
-E-mail (gmail): lnssbrandon at gmail dot com
+_E-mail (edu)_: lns_brandon at sjtu dot edu dot cn
+
+_E-mail (gmail)_: lnssbrandon at gmail dot com
 
 [GitHub](https://github.com/languisher)
+:::
 
-## Education
 
-[2021.9 - now] Undergraduate, Shanghai Jiao Tong University
 
-[2018.9 - 2021.6] High School, Hangzhou Foreign Language School
+
+
+:::note[Education]
+[2021.9 - now] _Undergraduate_, __Shanghai Jiao Tong University 上海交通大学__
+
+[2018.9 - 2021.6] _High School_, __Hangzhou Foreign Language School 杭州外国语学校__
+:::
 
